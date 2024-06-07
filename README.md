@@ -10,10 +10,10 @@ This repo serves as a demo for multiple issues.
 
 # Issues
 
-## Issue regarding a single entry point per pilet
+## Issue regarding a single entry point per pilet (https://github.com/smapiot/Piral.Blazor/issues/146)
 Open the route `/shop` an add some products to the cart. You'll see that the products are only added to the red cart, but not to the green one.
 
-## Issue regarding extensions not beng rerendered when params change
+## Issue regarding extensions not beng rerendered when params change (https://github.com/smapiot/Piral.Blazor/issues/145)
 Open the `/shop` page and toggle the "switch"-button in the topbar. 
 This changes the boolean value in `LayoutPilet\Components\Topbar.razor` on line 23.
 The value is passed to the Cart Extensions in the Topbar.Right extension-slot, but they are not updatet when this value changes.
