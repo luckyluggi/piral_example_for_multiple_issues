@@ -1,0 +1,14 @@
+﻿@inherits ComponentBase
+
+<div class="card">
+    <h3>@Title</h3>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = null!;
+
+    [Parameter, EditorRequired]
+    public RenderFragment ChildContent { get; set; } = null!;
+}

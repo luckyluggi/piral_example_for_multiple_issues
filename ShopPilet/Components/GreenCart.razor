@@ -1,0 +1,19 @@
+@namespace ShopPilet
+
+<span style="color: black; margin: 0 10px; padding: 5px; background: lightgreen;">
+    @if(ShowCartTextLeft){
+        <span>Green cart </span>
+    }
+    <span>(@GreenCartContext.ProductCount)</span>
+    @if(!ShowCartTextLeft){
+        <span> Green cart</span>
+    }
+</span>
+
+@code{
+    [CascadingParameter]
+    public GreenCartContext GreenCartContext { get; set; } = null!;
+    
+    [Parameter]
+    public bool ShowCartTextLeft { get; set; } = true;
+}

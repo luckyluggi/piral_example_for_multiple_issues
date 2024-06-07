@@ -1,0 +1,27 @@
+@namespace ShopPilet
+@inject RedCartState _redCartState
+@implements IDisposable
+
+<span style="color: white; margin: 0 10px; padding: 5px; background: red;">
+    @if(ShowCartTextLeft){
+        <span>Red cart </span>
+    }
+    <span>(@_redCartState.ProductCount)</span>
+    @if(!ShowCartTextLeft){
+        <span> Red cart</span>
+    }
+</span>
+
+@code{
+    [Parameter]
+    public bool ShowCartTextLeft { get; set; } = true;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _redCartState.OnStateChange += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        _redCartState.OnStateChange -= StateHasChanged;
+    }
+} 

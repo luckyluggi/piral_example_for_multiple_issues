@@ -1,0 +1,20 @@
+﻿@namespace ShopPilet
+@inject RedCartState _redCartState
+
+<li>
+    <strong>@Product.Name</strong>
+    <button @onclick=@AddToCart>add to cart</button>
+</li>
+
+@code{
+    [CascadingParameter]
+    public GreenCartContext GreenCartContext { get; set; } = null!;
+
+    [Parameter, EditorRequired]
+    public Product Product { get; set; } = null!;
+
+    private void AddToCart(){
+        GreenCartContext.AddToCart(Product);  
+        _redCartState.AddToCart(Product);
+    }
+}

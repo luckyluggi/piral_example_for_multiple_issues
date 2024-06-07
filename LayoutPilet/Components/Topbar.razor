@@ -1,0 +1,26 @@
+@attribute [PiralExtension("Topbar")]
+@namespace LayoutPilet
+
+<header>
+    <NavLink Href="/dashboard">Dashboard</NavLink>
+    <span>&nbsp;|&nbsp;</span>
+    <NavLink Href="/shop">Shop</NavLink>
+    <div style="flex-grow: 1;"></div>
+    <button @onclick=SwitchCartDirection>switch</button>
+    <div style="flex-grow: 1;"></div>
+    <Extension Name="Topbar.Right" Params=@Parameters />
+</header>
+
+@code{
+    CartExtensionParams Parameters { get; set; }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Parameters = new(true);
+    }
+
+    private void SwitchCartDirection(){
+        Parameters.ShowCartTextLeft = !Parameters.ShowCartTextLeft;
+        StateHasChanged();
+    }
+}

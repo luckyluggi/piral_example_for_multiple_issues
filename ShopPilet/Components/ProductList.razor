@@ -1,0 +1,18 @@
+﻿@namespace ShopPilet
+
+<ul>
+    @foreach(var product in _availableProducts)
+    {
+        <ProductListItem Product=@product />
+    }    
+</ul>
+
+@code{
+    ICollection<Product> _availableProducts = new List<Product>(){
+        new("Juggling ball", 5),
+        new("Tennis racket", 25),
+        new("Climbing rope", 65),
+        new("Skateboard", 29),
+        new("Bow and arrow", 85),
+    };
+}

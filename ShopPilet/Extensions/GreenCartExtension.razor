@@ -1,0 +1,12 @@
+@attribute [PiralExtension("Topbar.Right")]
+@namespace ShopPilet
+
+<GreenCartContext>
+    <GreenCart ShowCartTextLeft=@Parameters.ShowCartTextLeft />
+</GreenCartContext>
+
+@code{
+    [Parameter]
+    [PiralParameter("params")]
+    public CartExtensionParams Parameters { get; set; }
+}

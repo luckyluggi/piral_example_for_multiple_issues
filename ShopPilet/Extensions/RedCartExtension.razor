@@ -1,0 +1,10 @@
+@attribute [PiralExtension("Topbar.Right")]
+@namespace ShopPilet
+
+<RedCart ShowCartTextLeft=@Parameters.ShowCartTextLeft />
+
+@code{
+    [Parameter]
+    [PiralParameter("params")]
+    public CartExtensionParams Parameters { get; set; }
+}
