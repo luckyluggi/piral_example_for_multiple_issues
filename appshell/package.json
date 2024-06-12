@@ -6,10 +6,10 @@
     "piral"
   ],
   "dependencies": {
-    "blazor": "^8.0.16",
-    "piral-base": "1.5.6",
-    "piral-blazor": "^1.5.6",
-    "piral-core": "1.5.6",
+    "blazor": "^8.0.17-pre.20240610.2",
+    "piral-base": "^1.6.0-beta.7175",
+    "piral-blazor": "^1.6.0-beta.7175",
+    "piral-core": "^1.6.0-beta.7175",
     "react": "^18",
     "react-dom": "^18",
     "react-router": "^5",
@@ -36,8 +36,8 @@
     "@types/react-dom": "^18",
     "@types/react-router": "^5",
     "@types/react-router-dom": "^5",
-    "piral-cli": "1.5.6",
-    "piral-cli-esbuild": "1.0.1",
+    "piral-cli": "^1.6.0-beta.7175",
+    "piral-cli-esbuild": "^1.0.1-beta.6244",
     "typescript": "latest"
   }
 }
